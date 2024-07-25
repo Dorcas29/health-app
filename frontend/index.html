@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Compliance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#welcome">Welcome</a>
+            <a href="#about-us">About Us</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#dentist">Dentist</a>
+            <a href="#reviews">Reviews</a>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchContent()">Search</button>
+        </div>
+    </nav>
+    <header id="welcome">
+        <h1>Welcome to the Health Compliance Tracker</h1>
+    </header>
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>This application helps patients keep track of their medication and diet compliance.</p>
+    </section>
+    <section id="doctors">
+        <h2>Doctors</h2>
+        <img src="assets/doctor1.jpg" alt="Doctor 1">
+        <img src="assets/doctor2.jpg" alt="Doctor 2">
+    </section>
+    <section id="dentist">
+        <h2>Dentist</h2>
+        <img src="assets/dentist1.jpg" alt="Dentist 1">
+    </section>
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <video controls>
+            <source src="assets/review.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <div class="container">
+        <h1>Health Compliance Tracker</h1>
+        <form id="complianceForm">
+            <input type="hidden" id="patientId">
+            <div class="form-group">
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+                <small class="error-message" id="patientNameError"></small>
+            </div>
+            <div class="form-group">
+                <label for="medication">Medication (Antibiotics):</label>
+                <input type="text" id="medication" name="medication" required>
+                <small class="error-message" id="medicationError"></small>
+            </div>
+            <div class="form-group">
+                <label for="diet">Special Diet:</label>
+                <input type="text" id="diet" name="diet" required>
+                <small class="error-message" id="dietError"></small>
+            </div>
+            <div class="form-group">
+                <label for="initialPills">Initial Pill Count:</label>
+                <input type="number" id="initialPills" name="initialPills" required>
+                <small class="error-message" id="initialPillsError"></small>
+            </div>
+            <div class="form-group">
+                <label for="pillsPerDay">Pills Taken Per Day:</label>
+                <input type="number" id="pillsPerDay" name="pillsPerDay" required>
+                <small class="error-message" id="pillsPerDayError"></small>
+            </div>
+            <button type="submit">Add Patient</button>
+        </form>
+        <h2>Patient List</h2>
+        <ul id="patientList"></ul>
+    </div>
+    <section id="notifications">
+        <h2>Set Notifications</h2>
+        <form>
+            <div class="form-group">
+                <label for="reviewDateInput">Review Date:</label>
+                <input type="date" id="reviewDateInput" required>
+            </div>
+            <div class="form-group">
+                <label for="pillTimeInput">Pill Time:</label>
+                <input type="time" id="pillTimeInput" required>
+            </div>
+            <div class="form-group">
+                <label for="dietInfoInput">Special Diet Info:</label>
+                <input type="text" id="dietInfoInput" required>
+            </div>
+            <button type="button" onclick="setNotifications()">Set Notifications</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Dorcas Tatenda Mutyavaviri All Rights Reserved 2024</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
